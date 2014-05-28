@@ -15,6 +15,7 @@
  */
 
 import grails.plugin.vijava.GrailsViJavaUtils
+import grails.plugin.vijava.PropertyCollectionLib
 
 class GrailsViJavaGrailsPlugin {
     // the plugin version
@@ -50,6 +51,11 @@ A "Groovy" wrapper / interface around VMWare VI Java SDK.
         // Declare beans.
 
         'grailsViJavaUtils'(GrailsViJavaUtils) { bean ->
+            bean.scope = 'singleton'
+            bean.autowire = true
+        }
+
+        'propertyCollectionLib'(PropertyCollectionLib) { bean ->
             bean.scope = 'singleton'
             bean.autowire = true
         }
