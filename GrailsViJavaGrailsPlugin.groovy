@@ -13,6 +13,9 @@
  * implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
+
+import grails.plugin.vijava.GrailsViJavaUtils
+
 class GrailsViJavaGrailsPlugin {
     // the plugin version
     def version = "0.0.1"
@@ -44,7 +47,12 @@ A "Groovy" wrapper / interface around VMWare VI Java SDK.
     }
 
     def doWithSpring = {
-        // TODO Implement runtime spring config (optional)
+        // Declare beans.
+
+        'grailsViJavaUtils'(GrailsViJavaUtils) { bean ->
+            bean.scope = 'singleton'
+            bean.autowire = true
+        }
     }
 
     def doWithDynamicMethods = { ctx ->
