@@ -17,7 +17,7 @@
 import grails.plugin.vijava.GrailsViJavaUtils
 import grails.plugin.vijava.PropertyCollectionLib
 
-class GrailsViJavaGrailsPlugin {
+class ViJavaGrailsPlugin {
     // the plugin version
     def version = "0.0.1"
     // the version or versions of Grails the plugin is designed for
